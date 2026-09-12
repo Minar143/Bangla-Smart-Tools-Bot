@@ -1,14 +1,16 @@
-# Bangla Smart Tools Telegram Bot
+# Bangla Smart Tools Bot v2
 
-## Render settings
-Build Command: npm install
-Start Command: npm start
+Telegram bot with practical photo/PDF/CV/news/GK/weather/currency/translator tools.
 
-Environment Variables:
-BOT_TOKEN = আপনার নতুন BotFather token
-ADMIN_ID = 6490210446
-MONETAG_DIRECT_LINK = https://omg10.com/4/11768388
-COOLDOWN_SECONDS = 20
-PORT = 10000
+## Render Environment Variables
+- BOT_TOKEN = your current BotFather token (never share it)
+- ADMIN_ID = 6490210446
+- MONETAG_DIRECT_LINK = https://omg10.com/4/11768388
+- COOLDOWN_SECONDS = 20
+- PORT = 10000
 
-Never put BOT_TOKEN in GitHub. Never use auto-clicks, forced ad clicks, VPN traffic, fake traffic, or artificial ad interactions.
+Build command: `npm install`
+Start command: `npm start`
+
+## Important
+The Monetag link is shown through a clear user-initiated Continue button. Do not use auto-clicks, forced clicks, bots, VPN traffic, or misleading labels.
