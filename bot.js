@@ -60,7 +60,17 @@ function validTask(ctx, id) {
 }
 async function gate(ctx, action, extra={}) {
   const id = createTask(ctx, action, extra);
-  await ctx.reply(`🔗 **একটি ছোট ধাপ আগে**\n\n${COOLDOWN_SECONDS} সেকেন্ড অপেক্ষার পর নিচের বাটনে চাপলে কাজটি চালু হবে।`, { parse_mode:'Markdown', ...monetagButton(id) });
+  await ctx.reply(
+    `🔗 **একটি ছোট ধাপ আগে**\n\nপ্রথমে **Continue** চাপুন। Link খুলে Telegram-এ ফিরে আসুন। তারপর ${COOLDOWN_SECONDS} সেকেন্ড পূর্ণ হলে **কাজ চালু করুন** বাটনে চাপুন।`,
+    {
+      parse_mode:'Markdown',
+      ...Markup.inlineKeyboard([
+        [Markup.button.url('🔗 Continue', MONETAG_DIRECT_LINK)],
+        [Markup.button.callback(`▶️ ${COOLDOWN_SECONDS} সেকেন্ড পরে কাজ চালু করুন`, `proceed:${id}`)],
+        [Markup.button.callback('❌ Cancel','home')]
+      ])
+    }
+  );
 }
 async function processProceed(ctx, id) {
   const t = tasks.get(id);

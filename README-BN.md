@@ -14,3 +14,7 @@ Start command: `npm start`
 
 ## Important
 The Monetag link is shown through a clear user-initiated Continue button. Do not use auto-clicks, forced clicks, bots, VPN traffic, or misleading labels.
+
+
+### v2.1 Monetag flow fix
+Continue link খোলার পর Telegram-এ ফিরে এসে cooldown শেষ হলে `▶️ ... কাজ চালু করুন` বাটন চাপতে হবে। Bot Monetag-এ ad view/click হয়েছে কি না যাচাই করে না; তাই কোনো forced/auto click নেই।
